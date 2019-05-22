@@ -1,1 +1,1 @@
-Angular Authorization Application for the darly.solutions
+Angular Authorization Application
