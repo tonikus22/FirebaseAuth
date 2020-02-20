@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AuGuard } from '../core/au.guard';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,7 +25,7 @@ export const firebaseConfig = {
 
 const routes: Routes = [
 	{path: '', component: HomePageComponent},
-	{path: 'login', component: LoginPageComponent}
+	{path: 'login', component: LoginPageComponent, canActivate: [AuGuard]}
 ]
 
 @NgModule({
